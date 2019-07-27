@@ -19,8 +19,8 @@ var ToDoApp = /** @class */ (function () {
         //code to eshtablish a local server
         this.app = express_1.default();
         this.app.listen(3000, 'localhost', function () { console.log("server  is ruuning on Port 3000"); });
-        route_1.Router.ConfigRoutes(this.app);
         this.configBodyParser();
+        route_1.Router.ConfigRoutes(this.app);
         db_1.DB.connectMonoDb();
     }
     ToDoApp.prototype.configBodyParser = function () {

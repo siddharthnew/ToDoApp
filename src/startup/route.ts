@@ -1,4 +1,5 @@
 import express from "express"
+import {todoRoutes} from "./../routes/todoRoutes"
 export class Router{
     constructor(){}
         public static ConfigRoutes(app: express.Application):void{
@@ -8,6 +9,8 @@ export class Router{
                     "success":"server is running"
                 })
             })
+
+            app.use('/todo',todoRoutes);
         }
     }
 

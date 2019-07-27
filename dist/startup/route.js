@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var todoRoutes_1 = require("./../routes/todoRoutes");
 var Router = /** @class */ (function () {
     function Router() {
     }
@@ -9,6 +10,7 @@ var Router = /** @class */ (function () {
                 "success": "server is running"
             });
         });
+        app.use('/todo', todoRoutes_1.todoRoutes);
     };
     return Router;
 }());

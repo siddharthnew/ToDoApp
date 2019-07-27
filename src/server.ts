@@ -9,8 +9,8 @@ class ToDoApp {
         //code to eshtablish a local server
         this.app =  express();
         this.app.listen(3000, 'localhost', () => { console.log("server  is ruuning on Port 3000") });
-        Router.ConfigRoutes(this.app);
         this.configBodyParser();
+        Router.ConfigRoutes(this.app);
         DB.connectMonoDb();
       
     }
